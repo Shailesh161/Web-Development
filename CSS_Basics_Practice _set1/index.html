@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Practice set 1</title>
+    <style> 
+        #heading
+        {
+            color: rgb(7, 131, 240);
+        }
+
+        h3
+        {
+            color:grey
+        }
+        /* LEARN TO COMMENT */
+
+        /* ID selector is selected using # symbol */
+        #ID_Selector1
+        {
+            color:orangered
+        }
+
+        /* Element Selector */
+        p
+        {
+            color: darkblue;
+        }
+
+        /* class Selctor using (.) symbol */
+        .Class_Selector1
+        {
+            color: magenta;
+        }
+
+        /* Multiple selectors can be added using ccomma here */
+        #div_21, #div_22
+        {
+            color: rgb(111, 167, 27);
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="color:red"> This is heading in RED color.</h1>
+    <hr>
+    <!-- to apply the separation line between tags -->
+    <div id="heading" style="color:peru"> Created heading with div tag and now we have
+    to apply all three types of styling to see the highest priority stylings.The Inline css 
+    has highest priority and after that internal css has priority and the external css has the
+    least priority but in industry for code separation mostly the external CSS is used.
+
+    </div>
+
+        <h2>To check the external css</h2>
+        <!-- added brown color using external css -->
+        <hr>
+        <h3> To check the Internal css</h3>
+        <!-- added grey color using Internal css -->
+        <hr>
+        <h4 style="color: mediumseagreen;">To check the inline css</h4>
+        <!-- added yellow color using Inline css -->
+        <hr>
+        <div id="ID_Selector1">DIV using ID selector (# is used for ID selector)</div>
+        <hr>
+        <p>Paragraph using Element Selector </p>
+        <hr>
+        <h1 class="Class_Selector1">heading</h1>
+        <hr>
+
+        <div id="div_21">Sample div_21 is created to check multiple selector concept</div>
+        <div id="div_22" >Sample div_22 is created to check multiple selector concept</div>
+</body>
+</html>
