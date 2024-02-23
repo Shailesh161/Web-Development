@@ -1,0 +1,79 @@
+//Run on ONecompiler.com
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees [
+    <!ELEMENT employees (employee+)>
+    <!ELEMENT employee (id, name, department, position, salary)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT department (#PCDATA)>
+    <!ELEMENT position (#PCDATA)>
+    <!ELEMENT salary (#PCDATA)>
+]>
+
+<?xml-stylesheet type="text/xsl" href="#stylesheet"?>
+<stylesheet xmlns="http://www.w3.org/1999/XSL/Transform" id="stylesheet" version="1.0">
+  <xsl:template match="/">
+    <html>
+    <head>
+      <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        th, td {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>Employee Information</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Position</th>
+          <th>Salary</th>
+        </tr>
+        <xsl:for-each select="employees/employee">
+          <tr>
+            <td><xsl:value-of select="id"/></td>
+            <td><xsl:value-of select="name"/></td>
+            <td><xsl:value-of select="department"/></td>
+            <td><xsl:value-of select="position"/></td>
+            <td><xsl:value-of select="salary"/></td>
+          </tr>
+        </xsl:for-each>
+        <!-- Additional employee entries -->
+        <tr>
+          <td>001</td>
+          <td>Shailesh </td>
+          <td>Human Resources</td>
+          <td>HR Specialist</td>
+          <td>75000</td>
+        </tr>
+        <tr>
+          <td>002</td>
+          <td>Swapnil </td>
+          <td>Finance</td>
+          <td>Financial Analyst</td>
+          <td>85000</td>
+        </tr>
+        <tr>
+          <td>003</td>
+          <td>Tejas</td>
+          <td>Operations</td>
+          <td>Operations Manager</td>
+          <td>95000</td>
+        </tr>
+      </table>
+    </body>
+    </html>
+  </xsl:template>
+</stylesheet>
